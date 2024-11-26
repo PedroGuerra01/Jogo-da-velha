@@ -1,0 +1,81 @@
+:root {
+    --background: #1a1a1a;
+    --highlight: #007BFF;
+    --text-color: #ffffff;
+    --cell-border: #444444;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header h1 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+header .highlight {
+    color: var(--highlight);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--highlight);
+    cursor: pointer;
+    border: 2px solid var(--cell-border);
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #333333;
+}
+
+.cell.taken {
+    cursor: not-allowed;
+}
+
+.status {
+    text-align: center;
+}
+
+#game-status {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--highlight);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
